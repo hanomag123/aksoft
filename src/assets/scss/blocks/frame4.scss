@@ -1,0 +1,107 @@
+.frame-welcome {
+  padding: 4rem 6rem;
+  padding-bottom: 13.6rem;
+  background-color: #F7F7F7;
+  border-radius: 1rem;
+}
+
+.frame-desc {
+  max-width: 58.8rem;
+}
+
+.last-margin {
+  margin-top: 5.4rem;
+}
+
+.frame-surveys {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  li {
+    min-height: 46.5rem;
+  }
+}
+
+.frame-survey {
+  background-color: var(--green);
+  padding: 3rem;
+  border-radius: 2rem;
+
+  &.--blue {
+    background-color: #7CD3F3;
+    width: 42rem;
+  }
+  &.--green {
+    width: 39rem;
+    background-color: #83D7BE;
+  }
+}
+
+.frame-video {
+  border-radius: 2rem;
+  overflow: hidden;
+  position: relative;
+  width: 77rem;
+  &:hover {
+    &::before {
+      opacity: 0.8;
+    }
+  }
+  &::before {
+    content: '';
+    width: 6.1rem;
+    height: 6.1rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url("data:image/svg+xml,%3Csvg width='46' height='53' viewBox='0 0 46 53' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M46 26.5L0.249998 52.9138L0.25 0.0862235L46 26.5Z' fill='white'/%3E%3C/svg%3E%0A");
+    background-size: contain;
+    background-repeat: no-repeat;
+    pointer-events: none;
+    transition: opacity .3s;
+  }
+  a {
+    display: block;
+    height: 100%;
+  }
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.frame-head {
+  display: flex;
+  justify-content: space-between;
+}
+
+.frame-buttons {
+  display: flex;
+  gap: 1.5rem;
+  a {
+    background-color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.8rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    box-shadow: 0 0 2rem 0.1rem rgba($color: #e0e0e0, $alpha: 0.1);
+    position: relative;
+    z-index: 1;
+    transition: background-color .3s;
+    &:hover {
+      background-color: var(--blue);
+      svg {
+        filter: invert(1);
+      }
+    }
+  }
+  svg {
+    width: 2.5rem;
+    height: 2.5rem;
+    transition: filter .3s;
+  }
+}

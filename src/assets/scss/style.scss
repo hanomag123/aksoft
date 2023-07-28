@@ -11,6 +11,7 @@
 html {
   box-sizing: border-box;
   font-size: calc(100vw / 1920 * 10);
+
   @include breakpoint($cos-bp) {
     font-size: calc(100vw / 1440 * 10);
   }
@@ -33,7 +34,13 @@ html {
 }
 
 body {
+  font-family: 'Segoe UI';
+  font-style: normal;
 
+  color: var(--black);
+
+  font-size: 1.8rem;
+  line-height: 2.4rem;
 }
 
 img {
@@ -46,13 +53,11 @@ svg {
 }
 
 /* Vendors */
-@import "./importsVendors.scss";
+@import "importsVendors";
 
 
 /* Blocks */
-
-@import "./importsBlocks.scss";
-
+@import "importsBlocks";
 
 
 
@@ -65,33 +70,88 @@ svg {
 }
 
 .container {
-  padding-right: 4rem;
-  padding-left: 4rem;
+  padding-right: 14rem;
+  padding-left: 14rem;
+
   @include breakpoint($cos-bp) {
     padding-right: 5rem;
     padding-left: 5rem;
   }
+
   @include breakpoint($xl-bp) {
     padding-right: 2rem;
     padding-left: 2rem;
   }
+
   @include breakpoint($sm-bp) {
     padding-right: 2.5rem;
     padding-left: 2.5rem;
   }
 }
 
+.container-2 {
+  padding-right: 8rem;
+  padding-left: 8rem;
+}
+
+h1,
+.h1 {
+  font-weight: 600;
+  font-size: 4.8rem;
+  line-height: 6.4rem;
+}
+
+h2,
+.h2 {
+  font-weight: 600;
+  font-size: 3.2rem;
+  line-height: 4.25rem;
+}
+
+h3,
+.h3 {
+  font-weight: 600;
+  line-height: 3.2rem;
+  font-size: 2.4rem;
+}
+
+.mt-160 {
+  margin-top: 16rem;
+}
+
+.mt-80 {
+  margin-top: 8rem;
+}
+
+.mt-60 {
+  margin-top: 6rem;
+}
+
+.mt-40 {
+  margin-top: 4rem;
+}
+
+.mt-30 {
+  margin-top: 3rem;
+}
+.mt-20 {
+  margin-top: 2rem;
+}
+
 .img-contain {
   display: block;
+
   img {
     width: 100%;
     height: 100%;
     object-fit: contain;
   }
 }
+
 .img-cover {
   display: block;
   overflow: hidden;
+
   img {
     width: 100%;
     height: 100%;

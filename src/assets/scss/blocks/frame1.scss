@@ -1,0 +1,42 @@
+.frame-block {
+  max-width: 66.8rem;
+  margin: 0 auto;
+  box-sizing: content-box;
+  padding-left: 13rem;
+  p {
+    margin-bottom: 2rem;
+  }
+}
+
+.page-button {
+  background-color: var(--blue);
+  color: var(--white);
+  padding: 1.7rem;
+  display: block;
+  border-radius: 1.4rem;
+  text-align: center;
+  border: 0.1rem solid var(--blue);
+  font-size: inherit;
+  line-height: inherit;
+  font-weight: inherit;
+  font-family: inherit;
+  width: 100%;
+  transition: background-color .3s;
+  &:hover {
+    background-color: var(--green);
+  }
+  &.--green {
+    background-color: var(--green);
+    &:hover {
+      background-color: var(--blue);
+    }
+  }
+}
+
+.max-w-500 {
+  max-width: 50.1rem;
+}
+
+.mt-110 {
+  margin-top: 11rem;
+}

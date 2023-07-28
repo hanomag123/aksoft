@@ -106,11 +106,11 @@ function css(cb) {
       })
     )
     // .pipe(postcss([tailwindcss("./tailwind.config.js")]))
-    .pipe(
-      autoprefixer({
-        cascade: true,
-      })
-    )
+    // .pipe(
+    //   autoprefixer({
+    //     cascade: true,
+    //   })
+    // )
     .pipe(cssbeautify())
     // .pipe(
     //   cssnano({
@@ -347,7 +347,7 @@ function watchFiles() {
   gulp.watch([path.watch.html], gulp.series(html, cssWatch));
   // gulp.watch([path.watch.pug], pugs)
   // gulp.watch([path.watch.css], vendorcss);
-  // gulp.watch([path.watch.css], cssWatch);
+  gulp.watch([path.watch.css], cssWatch);
   gulp.watch([path.watch.js], jsWatch);
   gulp.watch([path.watch.images], imagesWatch);
   // gulp.watch([path.watch.images], images);
